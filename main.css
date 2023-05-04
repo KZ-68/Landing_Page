@@ -547,6 +547,11 @@ p.textGray_Section6 {
     color: white;
 }
 
+#section_6_button:hover {
+    background-color: #3174fa;
+    cursor: pointer;
+}
+
 a.button_link_2 {
     text-decoration: none;
 }
@@ -753,11 +758,11 @@ th.headerCell_Price3 {
     flex-wrap: wrap;
     justify-content: center;
     padding: 50px 0;
-    gap: 15px
+    gap: 20px
 }
 
 figure.blog_images {
-    margin: 10px;
+    margin: 1px;
     width: 400px;
     height: 300px;
     border-radius: 8px;
@@ -772,7 +777,19 @@ figure.blog_images * {
     transition: all 0.1s ease;
   }
 
-.blog_img {
+.blog_img_1 {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+#blog_img_2 {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+#blog_img_3 {
     width: 100%;
     border-radius: 8px;
     display: block;
@@ -797,19 +814,30 @@ figure.blog_images figcaption {
     bottom: 189px;
     margin: 8px 18px 5px;
     position: absolute;
+    pointer-events: none;
   }
 
 figure.blog_images:hover figcaption {
     color: #fff;
-    
 }
 
 figcaption.blog_heading {
     color:#00000000
 }
 
+.blog_img_1:hover {
+    opacity: 0.6;
+    -webkit-transform: scale(1.0);
+     transform: scale(1.0);
+}
 
-.blog_img:hover {
+#blog_img_2:hover {
+    opacity: 0.6;
+    -webkit-transform: scale(1.0);
+     transform: scale(1.0);
+}
+
+#blog_img_3:hover {
     opacity: 0.6;
     -webkit-transform: scale(1.0);
      transform: scale(1.0);
