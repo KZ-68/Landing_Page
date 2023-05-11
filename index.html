@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076e75914.js" crossorigin="anonymous"></script>
     <script src="./js/burger_menu.js" async></script>
+    <script src="./js/carousel.js" async></script>
     <title>Landing Page</title>
   </head>
   <body>
@@ -88,29 +89,34 @@
                 <h2 class="sectionHeading">Products Features</h2>
                 <p class="text_gray">It is long established fact that a reader will be of a page when<br> established fact looking at its layout.</p>
                 </div>
-                <div id="product_block">
-                <article class="product_1">
-                    <figure id="figure_globe">
-                        <i class="fa-solid fa-globe fa-2xl" style="color: #ffffff; font-size: 60px;"></i>
-                    </figure>
-                    <h3 class="section1_h3">Digital Design</h3>
-                    <p class="section1_text">Some quick exemple text to build ont the card<br> title and make up the bulk on the card the<br> platform.</p>
-                </article>
-                <article class="product_2">
-                    <figure id="figure_paint">
-                        <i class="fa-solid fa-brush fa-2xl" style="color: #ffffff; font-size: 60px;"></i>
-                    </figure>
-                    <h3 class="section1_h3">Unlimited Colors</h3>
-                    <p class="section1_text">Credibly brand stanaads compliant user<br> exteible service College Anihb ocean euismod<br> tincidunt laoreet.</p>
-                </article>
-                <article class="product_3">
-                    <figure id="figure_chess">
-                        <i class="fa-solid fa-chess fa-2xl" style="color: #ffffff; font-size: 60px;"></i>
-                    </figure>
-                    <h3 class="section1_h3">Strategy Solutions</h3>
-                    <p class="section1_text">Separated they live in Bookmarks grove right at<br> the coast of the Semantics, a large ocean<br> regelialia.</p>
-                </article>
-            </div>
+                
+                <div class="slider-wrapper">
+                    <ul class="slides-container" id="slides-container">
+                        <article class="product">
+                            <figure id="figure_globe">
+                                <i class="fa-solid fa-globe fa-2xl" class=product_icons style="color: #ffffff;"></i>
+                            </figure>
+                            <h3 class="section1_h3">Digital Design</h3>
+                            <p class="section1_text">Some quick exemple text to build ont the card<br> title and make up the bulk on the card the<br> platform.</p>
+                        </article>
+                        <article class="product">
+                            <figure id="figure_paint">
+                                <i class="fa-solid fa-brush fa-2xl" class=product_icons style="color: #ffffff; "></i>
+                            </figure>
+                            <h3 class="section1_h3">Unlimited Colors</h3>
+                            <p class="section1_text">Credibly brand stanaads compliant user<br> exteible service College Anihb ocean euismod<br> tincidunt laoreet.</p>
+                        </article>
+                        <article class="product">
+                            <figure id="figure_chess">
+                                <i class="fa-solid fa-chess fa-2xl" class=product_icons style="color: #ffffff;"></i>
+                            </figure>
+                            <h3 class="section1_h3">Strategy Solutions</h3>
+                            <p class="section1_text">Separated they live in Bookmarks grove right at<br> the coast of the Semantics, a large ocean<br> regelialia.</p>
+                        </article>
+                    </ul>
+                </div>
+
+
             </section>
 
             <!-- Section 2 -->

@@ -27,6 +27,14 @@ body {
 }
 
 /* Logo animé */
+a#sideBtn.gear_spin {
+    top: 250px;
+    left: 0px;
+    width: 70px;
+    height: 60px;
+    position: fixed; /* Oblige l'élément à défiler sur la page */
+}
+
 .gear_spin {
     z-index: 999;
     width: 30px;
@@ -314,16 +322,17 @@ h2.sectionHeading {
     padding-bottom: 80px;
 }
 
-
-#product_block
-{
+.slider-wrapper {
+    position: relative;
+    overflow: visible;
+}
+  
+.slides-container {
     display: flex;
-    flex-direction: row;
-    gap: 25px;
-    justify-content: center;
+    gap: 20px;
 }
 
-.product_1, .product_2, .product_3 {
+.product {
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
     border-radius: 20px;
     text-align: center;
@@ -344,7 +353,7 @@ h2.sectionHeading {
     padding: 27px 0;
 }
 
-.product_1:hover, .product_1:focus, .product_1:active, .product_2:hover, .product_2:focus, .product_2:active, .product_3:hover, .product_3:focus, .product_3:active {
+.product:hover, .product:focus, .product:active {
     transform: translate(0px, -15px);
 }
 
@@ -1021,6 +1030,10 @@ figcaption.blog_heading {
         font-size: 12px;
     }
 
+    a#sideBtn.gear_spin {
+        display: none;
+    }
+
     #openBtn {
         display: block;
     }
@@ -1069,13 +1082,36 @@ figcaption.blog_heading {
         width: 350px;
     }
 
-    #product_block {
-        flex-direction: column;
-        align-items: center;
+    .slider-wrapper {
+        position: relative;
+        overflow: hidden;
     }
 
-    i.fa-brush {
-        font-size: 14px
+    .slides-container {
+        width: 217px;
+        overflow:scroll;
+        gap: 20px;
+        position: relative;
+        left: 75px;
+        height: 343px;
+    }
+
+    .product {
+        width: 180px;
+        height: 180px;
+        padding: 40px 40px;
+    }
+
+    .fa-solid.fa-globe.fa-2xl {
+        font-size: 45px;
+    }
+
+    .fa-solid.fa-brush.fa-2xl {
+        font-size: 45px;
+    }
+
+    .fa-solid.fa-chess.fa-2xl {
+        font-size: 45px;
     }
 
     .section1_h3 {
@@ -1083,13 +1119,7 @@ figcaption.blog_heading {
     }
     
     .section1_text {
-        font-size: 12px;
-    }
-
-    .product_1, .product_2, .product_3 {
-        width: 180px;
-        height: 180px;
-        padding: 40px 40px;
+        font-size: 10px;
     }
 
     #figure_globe {
