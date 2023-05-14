@@ -89,11 +89,14 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
 }
 
 #kucra {
     color: white;
     font-family: "Poppins-Bold";
+    margin: 0;
 }
 
 .menu {
@@ -107,20 +110,26 @@ ul
     flex-direction: row;
     padding: 0;
     align-items: center;
+    margin: 0
 }
 
 li
 {
     list-style-type: none;
-    font-size: 20px;
     padding-left: 10px;
     padding-right: 10px;
 }
+
+hr {
+    display: none;
+}
+
 
 .link_menu
 {
     text-decoration: none;
     color: white;
+    font-size: 20px;
 }
 
 .link_menu:hover
@@ -137,21 +146,20 @@ h2
 /* Menu Burger */
 
 .burgerMenu {
-    height: 260px;
-    width: 250px;
+    height: 83px;
+    width: 391px;
     position: fixed;
     z-index: 3;
-    top: 0;
-    right: -250px;
+    top: -140px;
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
     padding-top: 15px;
-    transition: right 0.5s ease;
+    transition: top 0.5s ease;
   }
   
 
 .burgerMenu a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     color: #ffffff;
     display: block;
     transition: 0.1s;
@@ -164,26 +172,27 @@ h2
 .burgerMenu ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
     margin: 0;
 }
   
 
 .burgerMenu.active {
-    right: 0;
+    top: 0px;
 }
   
 
 .burgerMenu .close {
     position: absolute;
-    top: 0;
-    right: 25px;
+    top: 55px;
+    right: 182px;
     font-size: 36px;
 }
   
 #openBtn {
-    padding-top: 15px;
     display: none;
 }
 
@@ -210,6 +219,18 @@ h2
 
 #social_top i {
     cursor: pointer;
+}
+
+.fab.fa-facebook-f {
+    font-size: 25px;
+}
+
+.fab.fa-twitter {
+    font-size: 25px;
+}
+
+.fab.fa-instagram {
+    font-size: 25px;
 }
 
 #top_2
@@ -320,16 +341,6 @@ h2.sectionHeading {
 
 #product_text {
     padding-bottom: 80px;
-}
-
-.slider-wrapper {
-    position: relative;
-    overflow: visible;
-}
-  
-.slides-container {
-    display: flex;
-    gap: 20px;
 }
 
 .product {
@@ -585,7 +596,8 @@ h1#section4Heading {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
+    gap: 50px;
 }
 
 .section6_BlockText {
@@ -650,7 +662,7 @@ a.button_link_2 {
     text-align: center;
 }
 
-#section_prices {
+#prices_container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -717,7 +729,7 @@ th {
 
 td {
     text-align: right;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 th.headerCell_Price1 {
@@ -957,6 +969,7 @@ figcaption.blog_heading {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 35px;
 }
 
 .nav_Footer a, li {
@@ -966,7 +979,7 @@ figcaption.blog_heading {
 
 #section_Footer small {
     color: rgb(136, 136, 136);
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @media only screen {
@@ -982,12 +995,58 @@ figcaption.blog_heading {
 }
 
 @media only screen and (min-device-width:768px) and (max-device-width: 1024px) {
+    .fab.fa-facebook-f {
+        font-size: 25px;
+    }
+
+    .fab.fa-twitter {
+        font-size: 25px;
+    }
+
+    .fab.fa-instagram {
+        font-size: 25px;
+    }
+    
+    .burgerMenu {
+        height: 83px;
+        width: 768px;
+    }
+    
+    .burgerMenu a {
+        font-size: 20px;
+    }
+
+    .burgerMenu .close {
+        top: 42px;
+        right: 19px;
+    }
+
+    #openBtn {
+        display: block;
+    }
+    
+    .menu ul {
+        display: none;
+    }
+    
     #illustration {
         width: 550px;
     }
 
     body, section {
         flex-wrap: wrap;
+    }
+
+    #product_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .creativity_img {
+        width: 518px;
     }
 
     #sale {
@@ -1007,9 +1066,37 @@ figcaption.blog_heading {
         right: 146px;
     }
 
+    .price1 {
+        margin-bottom: 20px;
+    }
+
     .price2 {
         margin-top: 20px;
     }
+
+}
+
+@media only screen and (min-device-width: 479px) and (max-device-width: 767px) {
+    #openBtn {
+        display: block;
+    }
+    
+    .menu ul {
+        display: none;
+    }
+
+    .creativity_img {
+        width: 350px;
+    }
+
+    .price1 {
+        margin-bottom: 20px;
+    }
+
+    #sale {
+        left: 167px;
+    }
+
 
 }
 
@@ -1028,6 +1115,16 @@ figcaption.blog_heading {
 
     p {
         font-size: 12px;
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        width: 300px;
+        background-color: rgb(207, 207, 207);
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 20px;
+        margin: 10px;
     }
 
     a#sideBtn.gear_spin {
@@ -1059,12 +1156,14 @@ figcaption.blog_heading {
     }
 
     h2#startup {
-        font-size: 20px;
+        font-size: 25px;
+        text-align: center;
     }
 
     .custom-search {
         width: 288px;
         height: 52px;
+        margin: 25px 0;
     }
 
     .custom-search-input {
@@ -1082,24 +1181,31 @@ figcaption.blog_heading {
         width: 350px;
     }
 
-    .slider-wrapper {
-        position: relative;
-        overflow: hidden;
+    #section_1 {
+        padding-bottom: 150px;
     }
 
-    .slides-container {
-        width: 217px;
-        overflow:scroll;
-        gap: 20px;
-        position: relative;
-        left: 75px;
-        height: 343px;
+    #product_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
     }
 
     .product {
         width: 180px;
         height: 180px;
         padding: 40px 40px;
+    }
+
+    .hr_product {
+        height: 1px;
+        width: 240px;
+        background-color: rgb(207, 207, 207);
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 20px;
+        margin: 10px;
     }
 
     .fa-solid.fa-globe.fa-2xl {
@@ -1115,15 +1221,17 @@ figcaption.blog_heading {
     }
 
     .section1_h3 {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .section1_text {
-        font-size: 10px;
+        font-size: 13px;
+        line-height: 1.1;
+        width: 168px;
     }
 
     #figure_globe {
-    padding: 10px 0;
+        padding: 10px 0;
     }
 
     #figure_paint {
@@ -1134,16 +1242,31 @@ figcaption.blog_heading {
         padding: 10px 0;
     }
 
+    #section_2 {
+        padding-bottom: 230px;
+    }
+
+    #section_3 {
+        padding-bottom: 150px;
+    }
+
     p.text_gray {
-        font-size: 12px;
+        font-size: 18px;
     }
 
     h2.sectionHeading {
-        font-size: 14px;
+        font-size: 19px;
+        text-align: center;
     }
 
     .block_profile {
         flex-direction: column;
+        gap: 40px;
+    }
+
+    h3.profileTextGray {
+        font-size: 14px;
+        margin-bottom: 20px;
     }
 
     figure.profile_background img {
@@ -1160,6 +1283,15 @@ figcaption.blog_heading {
         font-size: 12px;
     }
 
+    .hr_profile {
+        height: 1px;
+        width: 200px;
+        background-color: rgb(207, 207, 207);
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 20px;
+        margin: 10px;
+    }
+
     #backgroundSection4 {
         justify-content: center;
     }
@@ -1172,30 +1304,54 @@ figcaption.blog_heading {
         font-size: 16px;
     }
 
+    #section_5 {
+        padding-bottom: 150px;
+    }
+
     .img_flex {
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
     }
     
+    .section_5_img {
+        width: 167px;
+        height: 150px;
+    }
+
     p#text_white {
         width: 300px;
+        font-size: 13px;
     }
 
     #section_6 {
         padding: 175px 35px;
     }
+
+    .section_6_article {
+        flex-direction: column-reverse;
+    }
     
+    .section6_BlockText {
+        align-items: center;
+    }
+
     #section6Heading {
-        font-size: 16px;
+        font-size: 21px;
+        text-align: center;
     }
 
     p#section_6_text {
-        font-size: 11px;
+        font-size: 18px;
+        text-align: center;
     }
 
     p.textGray_Section6 {
         font-size: 14px;
+    }
+
+    a.button_link_2 {
+        padding: 0px 92px;
     }
 
     #section_6_button {
@@ -1205,24 +1361,41 @@ figcaption.blog_heading {
     }
 
     .creativity_img {
-        width: 250px;
+        width: 325px;
     }
 
     #section_7 {
         padding: 130px 30px;
     }
 
+    #prices_container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
     .price1, .price2, .price3 {
-        width: 263px;
+        width: 264px;
+        padding: 24px;
+    }
+
+    .price1 {
+        margin-bottom: 20px;
+    }
+
+    .price2 {
+        margin-top: 20px;
     }
 
     #sale {
         font-size: 16px;
-        left: 117px;
+        left: 153px;
+        top: -24px;
+        padding: 14px 10px;
     }
 
     h3.price_h3 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .price_amount {
@@ -1231,38 +1404,60 @@ figcaption.blog_heading {
 
     #dollarSign1 {
         right: 93px;
+        top: 0px
     }
 
     #dollarSign2 {
         right: 107px;
+        top: 0px
     }
 
     #dollarSign3 {
         right: 117px;
+        top: 0px
+    }
+
+    .price_table {
+        padding-top: 10px;
     }
 
     th.headerCell_Price1 {
-        padding-right: 15px;
+        padding-right: 33px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding-bottom: 15px;
+        gap: 5px;
     }
 
-    th {
-        padding-right: 50px;
+    th.headerCell_Price2 {
+        padding-right: 55px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding-bottom: 15px;
+        gap: 5px;
     }
 
     th.headerCell_Price3 {
-        padding-right: 15px;
+        padding-right: 12px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding-bottom: 15px;
+        gap: 5px;
     }
 
     .price1_3_button {
-        padding: 15px 45px;
+        padding: 15px 36px;
     }
 
     .price2_button {
-        padding: 15px 45px;
+        padding: 15px 36px;
     }
 
     .price2_button {
-        padding: 15px 45px;
+        padding: 15px 36px;
     }
 
     #section_8 {
@@ -1274,12 +1469,34 @@ figcaption.blog_heading {
         height: 187px;
     }
 
+    .blog_heading {
+        width: 113px;
+    }
+
+    .blog_p {
+        width: 116px;
+    }
+
     .socialIcon_Footer {
         gap: 20px;
     }
 
+    .nav_Footer {
+        padding-bottom: 25px;
+    }
+
+    .ul {
+        width: 100%;
+        justify-content: space-around;
+    }
+
     nav.nav_Footer li {
         font-size: 14px;
+    }
+
+    .privacy {
+        border: 1px solid grey;
+        border-width: 0 1px;
     }
 
     #section_Footer small {
