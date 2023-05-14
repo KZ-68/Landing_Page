@@ -995,40 +995,6 @@ figcaption.blog_heading {
 }
 
 @media only screen and (min-device-width:768px) and (max-device-width: 1024px) {
-    .fab.fa-facebook-f {
-        font-size: 25px;
-    }
-
-    .fab.fa-twitter {
-        font-size: 25px;
-    }
-
-    .fab.fa-instagram {
-        font-size: 25px;
-    }
-    
-    .burgerMenu {
-        height: 83px;
-        width: 768px;
-    }
-    
-    .burgerMenu a {
-        font-size: 20px;
-    }
-
-    .burgerMenu .close {
-        top: 42px;
-        right: 19px;
-    }
-
-    #openBtn {
-        display: block;
-    }
-    
-    .menu ul {
-        display: none;
-    }
-    
     #illustration {
         width: 550px;
     }
