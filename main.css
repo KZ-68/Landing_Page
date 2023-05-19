@@ -847,10 +847,11 @@ th.headerCell_Price3 {
     flex-wrap: wrap;
     justify-content: center;
     padding: 50px 0;
-    gap: 20px
+    gap: 40px
 }
 
 figure.blog_images {
+    margin: 1px;
     width: 400px;
     height: 300px;
     border-radius: 8px;
@@ -998,8 +999,59 @@ figcaption.blog_heading {
         width: 550px;
     }
 
-    body, section {
+    section {
         flex-wrap: wrap;
+    }
+
+    #openBtn {
+        display: block;
+        order: 4;
+    }
+
+    #kucra {
+        order: 3;
+        padding-right: 200px;
+    }
+
+    #top {
+        justify-content: space-evenly;
+        gap: 50px;
+    }
+
+    .menu {
+        order: 2;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .burgerMenu {
+        height: 287px;
+        width: 240px;
+        top: 0px;
+        right: -240px;
+        transition: right 0.5s ease;
+        background: radial-gradient(rgb(139 195 245 / 36%), #1294b8);
+        border-bottom-left-radius: 15px;
+    }
+
+    .burgerMenu.active {
+        right: 0px;
+    }
+
+    .burgerMenu .close {
+        top: 0px;
+        right: 24px;
+        font-size: 45px;
+    }
+
+    .burgerMenu a {
+        font-size: 21px;
+    }
+
+    .burgerMenu ul {
+        flex-direction: column;
     }
 
     #product_container {
@@ -1010,6 +1062,10 @@ figcaption.blog_heading {
         gap: 30px;
     }
     
+    .section_6_article {
+        justify-content: center
+    }
+
     .creativity_img {
         width: 518px;
     }
@@ -1041,7 +1097,7 @@ figcaption.blog_heading {
 
 }
 
-@media only screen and (min-device-width: 479px) and (max-device-width: 767px) {
+@media only screen and (min-device-width: 480px) and (max-device-width: 768px) {
     #openBtn {
         display: block;
     }
